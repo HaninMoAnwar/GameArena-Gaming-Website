@@ -1,0 +1,444 @@
+:root {
+    --essential-color-1: #c8e93d;
+    --essential-color-2: #ffff;
+    --dark-color: #0f0d13;
+    --navy-blue: #0c3361;
+
+}
+
+body {
+
+    font-family: "Chakra Petch", sans-serif;
+}
+
+body::selection {
+    background-color: var(--essential-color-1);
+    color: var(--dark-color);
+}
+
+.custom-w-80 {
+    width: 80%;
+}
+
+.custom-font-family-days {
+    font-family: "Days One", sans-serif;
+}
+
+.navbar-brand,
+.navbar-nav .nav-link.active {
+    color: var(--essential-color-1);
+}
+
+
+.navbar-brand:hover,
+.navbar-nav .nav-link.active:hover,
+.navbar-nav .nav-link:hover {
+    color: var(--essential-color-1);
+}
+
+.navbar-nav .nav-link {
+    color: var(--essential-color-2);
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.custom-navbar-toggler-icon {
+    color: var(--essential-color-2);
+    border: none;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+.custom-navbar-toggler-icon:hover {
+    color: var(--essential-color-1);
+}
+
+.font-size-20 {
+    font-size: 20px;
+}
+
+.font-size-60 {
+    font-size: 60px;
+}
+
+.bell-icon:hover path,
+.message-icon:hover path {
+    stroke: var(--essential-color-1);
+}
+
+.color-essential-1 {
+    color: var(--essential-color-1);
+}
+
+.color-essential-2 {
+    color: var(--essential-color-2);
+}
+
+.color-dark-color {
+    color: var(--dark-color);
+}
+
+.custom-btn-essential,
+.custom-btn-essential:hover {
+    background-color: var(--essential-color-1);
+}
+
+.custom-btn-secondary {
+    background-color: transparent;
+    color: var(--essential-color-1);
+    border-color: var(--essential-color-1);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+}
+
+.custom-btn-secondary:hover {
+    background-color: var(--essential-color-1);
+    color: var(--dark-color);
+}
+
+.custom-sparkle {
+    position: relative;
+    overflow: hidden;
+
+}
+
+.custom-text-essential-1 {
+    color: var(--essential-color-1);
+}
+
+.custom-text-essential-2 {
+    color: var(--essential-color-2);
+}
+
+.custom-sparkle::after {
+    position: absolute;
+    content: '';
+    width: 50%;
+    height: 100%;
+    top: 0;
+    left: -50%;
+    background-image: linear-gradient(90deg,
+            rgba(255, 255, 255, 0) 0%,
+            rgba(255, 255, 255, 0.8) 50%,
+            rgba(255, 255, 255, 0) 100%);
+    transform: skew(15deg);
+    transition: left 1s;
+}
+
+.custom-sparkle:hover::after {
+    left: 100%;
+
+}
+
+.custom-border {
+    border: 2rem solid var(--essential-color-1);
+}
+
+.header {
+    background-image: url(../images/hero-bg.jpg);
+    background-size: cover;
+    background-color: rgba(0, 0, 0, 0.9);
+    background-blend-mode: darken;
+    background-attachment: fixed;
+}
+
+.header-img {
+    position: relative;
+}
+
+.header-img figure {
+    position: absolute;
+    background-color: var(--dark-color);
+    top: 60%;
+    left: 0%;
+}
+
+.trophy-icon {
+    color: var(--essential-color-1);
+}
+
+.section-caption::before {
+    content: '';
+    position: absolute;
+    width: 30%;
+    height: 0.1rem;
+    top: 50%;
+    right: 110%;
+    background-image: linear-gradient(to right,
+            rgba(204, 255, 51, 0) 0%,
+            rgba(204, 255, 51, 1) 40%);
+}
+
+.section-caption::after {
+    content: '';
+    position: absolute;
+    width: 30%;
+    height: 0.1rem;
+    top: 50%;
+    left: 110%;
+    background-image: linear-gradient(to left,
+            rgba(204, 255, 51, 0) 0%,
+            rgba(204, 255, 51, 1) 40%);
+}
+
+.game-item {
+    position: relative;
+    overflow: hidden;
+}
+
+.game-item img {
+    transition: transform 1s;
+    object-fit: cover;
+
+}
+
+.game-item:hover img {
+    border: 2px solid var(--essential-color-1);
+    border-radius: 2rem;
+    transform: scale(1.01);
+
+}
+
+.game-item:hover::after {
+    content: '';
+    position: absolute;
+    width: 75%;
+    height: 100%;
+    top: 0%;
+    right: calc(50% - 75%/2);
+    background-image: linear-gradient(to top, var(--essential-color-1) 10%, rgba(255, 255, 255, 0)70%);
+    border-radius: 2rem;
+}
+
+.game-type-1 {
+    position: absolute;
+    top: -10%;
+    left: 20%;
+    transition: transform 0.5s;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+}
+
+.game-type-2 {
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    transition: transform 0.5s;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+}
+
+.game-item:hover .game-type-1,
+.game-item:hover .game-type-2 {
+    transform: translateY(250%);
+}
+
+.img-caption {
+    position: absolute;
+    bottom: -20%;
+    left: 20%;
+    transition: transform 0.5s;
+    z-index: 1;
+}
+
+.game-item:hover:hover .img-caption {
+    transform: translateY(-300%);
+}
+
+.slider-btn {
+    border: 3px solid;
+    border-radius: 50%;
+    width: auto;
+    height: min-content;
+}
+
+.slider-btn:hover {
+
+    color: var(--essential-color-1);
+}
+
+.arrow-icon path {
+    stroke: #a3a3a3;
+
+}
+
+.arrow-icon:hover path {
+    stroke: var(--essential-color-1);
+
+}
+
+.card-item {
+    position: relative;
+    border-color: var(--navy-blue);
+    transition: border-color 0.25s;
+    overflow: hidden;
+}
+
+.card-item:hover {
+    border-color: var(--essential-color-1);
+}
+
+.card-item:hover .card-icon {
+    color: var(--dark-color);
+}
+
+.card-item:hover .card-border {
+    color: var(--essential-color-1);
+}
+
+.card-item::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    border-style: solid;
+    border-width: 50px 50px 0 0;
+    border-color: var(--essential-color-1) transparent transparent transparent;
+    top: -10%;
+    left: -10%;
+
+    transition: top 0.25s, left 0.25s
+}
+
+.card-item:hover::after {
+    top: 5%;
+    left: 5%;
+}
+
+.card-item::before {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 0%;
+    border-style: solid;
+    border-width: 0 0 50px 50px;
+    border-color: transparent transparent var(--essential-color-1) transparent;
+    top: 100%;
+    left: 100%;
+
+    transition: top 0.25s, left 0.25s
+}
+
+.card-item:hover::before {
+    top: 75%;
+    left: 80%;
+}
+
+.card-item-img img {
+    height: 250px;
+    object-fit: cover;
+    /* border-radius: 20px; */
+}
+
+.game-slider-section {
+    position: relative;
+    background-image: radial-gradient(ellipse closest-side at 50% 50%,
+            var(--bs-dark) 0%,
+            var(--essential-color-1) 0%,
+            var(--bs-dark) 100%);
+}
+
+.game-slider-section::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 70%;
+    top: 0%;
+    right: calc(50% - 70%/2);
+    background-image: linear-gradient(to right,
+            var(--bs-dark-rgb)0%, var(--essential-color-1) 50%,
+            var(--bs-dark-rgb)100%);
+    box-shadow: 0px 0px 10px 2px var(--essential-color-1);
+}
+
+.game-slider-item-1 .carousel-item,
+.game-slider-item-2 .carousel-item {
+    transition: transform 20s 0s linear;
+}
+
+.game-slider-item-2 .carousel-item-next:not(.game-slider-item-2 .carousel-item-start),
+.game-slider-item-2 .active.carousel-item-end {
+    transform: translateX(-100%);
+}
+
+.game-slider-item-2 .carousel-item-prev:not(.game-slider-item-2 .carousel-item-end),
+.game-slider-item-2 .active.carousel-item-start {
+    transform: translateX(100%);
+}
+
+.vertical-caption {
+    transform: rotateZ(90deg);
+}
+
+.contact-item .icon-container {
+    height: 50px;
+    width: 50px;
+    background-color: var(--essential-color-1);
+    border-radius: 50%;
+}
+
+.contact-item {
+    background-color: rgba(30, 41, 57, 1);
+}
+
+.contact-social-item {
+    background-image: linear-gradient(to right, var(--essential-color-1), #5da449);
+}
+
+.contact-social-item .fa-stack {
+    transition: color 0.5s;
+}
+
+.contact-social-item .fa-stack:hover .icon-circle {
+    color: rgba(30, 41, 57, 0.5);
+}
+
+.form-section,
+.form-section input,
+.form-section select,
+.form-section textarea {
+    background-color: rgba(30, 41, 57, 1);
+}
+
+.form-section input::placeholder,
+.form-section textarea::placeholder,
+.form-section select {
+    color: var(--essential-color-2);
+    opacity: 0.5;
+}
+
+.form-section textarea {
+    resize: none;
+
+}
+
+.form-control:focus,
+.form-select:focus {
+    background-color: rgba(30, 41, 57, 1);
+    box-shadow: 0 0 0 .2rem  rgba(204, 255, 51, 0.5);
+    border: none;
+}
+.form-check-input:focus {
+    box-shadow: 0 0 0 .05rem  rgba(204, 255, 51, 0.5);
+    border: none;
+}
+
+.form-section .form-check-input {
+    background-color: var(--essential-color-2);
+    
+}
+.form-check-input:checked {
+    background-color: var(--dark-color);
+}
+.footer .icon-item:hover{
+    color: var(--essential-color-1);
+}
+a{
+    color: var(--bs-secondary-text-emphasis);
+}
+a:hover{
+    color: var(--essential-color-1);
+}
